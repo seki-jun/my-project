@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSSで爆速デザイン</title>
+    <title>レスポンシブ・デザインの練習</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 flex items-center justify-center min-h-screen">
-    <div class="max-w-sm p-8 bg-white border border-slate-200 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
-        <div class="flex flex-col items-center text-center">
-            <h1 class="text-2xl font-extrabold text-slate-800 mb-2">Web Developer Route</h1>
-            <p class="text-slate-600 leading-relaxed mb-6">
-                Tailwind CSSを使って、モダンなUIを構築しています。エンジニアとしての解像度を高めていきましょう。
-            </p>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-blue-200 active:scale-95 transition-all">
-                もっと学ぶ
-            </button>
+<body class="bg-slate-100 p-4 md:p-20">
+
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-800 mb-8 text-center md:text-left">最新のプロジェクト</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+                <span class="text-xs font-bold text-blue-500 uppercase">Phase 01</span>
+                <h3 class="text-lg font-bold mt-2">HTML/CSS 基礎</h3>
+                <p class="text-slate-600 mt-2 text-sm">Webの構造と装飾の基本。エンジニアの土台となるスキルです。</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500">
+                <span class="text-xs font-bold text-emerald-500 uppercase">Phase 02</span>
+                <h3 class="text-lg font-bold mt-2">Tailwind CSS</h3>
+                <p class="text-slate-600 mt-2 text-sm">モダンなスタイリング。効率的なUI構築を可能にします。</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500">
+                <span class="text-xs font-bold text-orange-500 uppercase">Phase 03</span>
+                <h3 class="text-lg font-bold mt-2">JavaScript</h3>
+                <p class="text-slate-600 mt-2 text-sm">動きのあるリッチな体験。ロジックの実装を学びます。</p>
+            </div>
+
         </div>
     </div>
+
 </body>
 </html>
