@@ -8,26 +8,43 @@
 </head>
 <body class="bg-slate-100 p-10 flex flex-col items-center">
 
-    <h2 id="main-title" class="text-3xl font-bold text-slate-800 mb-8">
-        最新のプロジェクト
+    <h2 id="main-title" class="text-3xl font-bold text-slate-800 mb-4">
+        クリックカウンター
     </h2>
+    
+    <div id="counter-display" class="text-6xl font-black text-blue-600 mb-8">
+        0
+    </div>
 
     <button id="action-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all active:scale-95">
-        ここをクリック！
+        カウントアップ！
     </button>
 
     <script>
-        // HTML側で付けた id を使って、JSの中で使えるように変数に入れます
+        // 1. 準備：HTML要素を取得する（変わらないので const）
         const actionButton = document.getElementById('action-btn');
-        const mainTitle = document.getElementById('main-title');
+        const display = document.getElementById('counter-display');
 
-        // ボタンがクリックされた時の処理
+        // 2. 状態：クリック回数を保存する（変わるので let）
+        let count = 0;
+
+        // 3. 処理：ボタンがクリックされた時の動き
         actionButton.addEventListener('click', () => {
-            mainTitle.innerText = "JSの動作に成功しました！";
-            mainTitle.classList.add("text-blue-500"); // 文字色を青に変える
-            alert("ボタンが押されました！"); // 画面にアラートを出す
+            // 数字を1増やす
+            count = count + 1;
+
+            // 画面の数字を書き換える
+            display.innerText = count;
+
+            // ★ここでデバッグ！コンソールに今の状態を出す
+            console.log("現在のカウント:", count);
+            
+            // 条件分岐（もし10回を超えたら...）
+            if (count >= 10) {
+                display.classList.add("text-red-500"); // 10回超えると赤くなる
+                console.log("10回達成！おめでとうございます！");
+            }
         });
     </script>
-
 </body>
 </html>
